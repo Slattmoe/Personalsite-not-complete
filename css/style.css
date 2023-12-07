@@ -36,9 +36,9 @@ ul
 }
 .section
 {
-    background: red;
+    background: var(--bg-black-900);
     min-height: 100vh;
-    display: block;
+    display: flex;
     position: fixed;
     left: 270px;
     padding: 0 30px;
@@ -47,6 +47,10 @@ ul
     z-index: 0;
     opacity: 1;
 
+}
+.main-content
+{
+    padding-left: 270px;
 }
 .padd-15
 {
@@ -57,7 +61,6 @@ ul
 {
     max-width: 1100px;
     width: 100%;
-    background: red;
     margin: auto;
 }
 .row
@@ -68,6 +71,23 @@ ul
     margin-right: -15px;
     position: relative;
 
+}
+.btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.btn:hover
+{
+    transform: scale(1.05);
 }
 /* aside*/
 .aside
@@ -206,9 +226,79 @@ ul
 {
     min-height: 100vh;
     display: flex;
-    color: var(--bg-black-900);
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    color: var(--text-black-900);
+}
+.home .home-info
+{flex: 0 0 60%;
+max-width: 60%;
+text-align: left; /* Center text */
+}
+h3.hello
+{
+    font-size: 28px;
+    margin: 15px 0;
+}
+h3.hello span
+{
+    font-family: 'Clicker Script' , cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+h3.my-profession
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+.typing
+{
+    color: var(--skin-color);
+}
+.home-info p
+{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+.home-img::after
+{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 20px;
+    bottom: -40px;
+}
+.home-img::before
+{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: -20px;
+    top: -40px;
 }
 .home .home-img img
 {
+    margin: auto; /* Center the image */
+    border-radius: 5px;
     height: 400px;
+
+}
+.home .hire-me {
+    margin-top: 20px; /* Adjust the margin as needed */
 }
