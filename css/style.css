@@ -36,11 +36,12 @@ ul
 }
 .section
 {
-    background: var(--bg-black-900);
+    background: red;
     min-height: 100vh;
     display: block;
     position: fixed;
     left: 270px;
+    padding: 0 30px;
     top: 0;
     right: 0;
     z-index: 0;
@@ -56,9 +57,17 @@ ul
 {
     max-width: 1100px;
     width: 100%;
-    background: red !important;
+    background: red;
     margin: auto;
-    border: 2px solid blue;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+
 }
 /* aside*/
 .aside
@@ -193,6 +202,12 @@ ul
     margin-right: 15px;
 }
 /* home */
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    color: var(--bg-black-900);
+}
 .home .home-img img
 {
     height: 400px;
